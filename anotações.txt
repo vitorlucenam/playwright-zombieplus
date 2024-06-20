@@ -1,0 +1,28 @@
+Para selecionar o botão usando xpath
+
+    //button[text()="Aperte o play... se tiver coragem"]
+
+    //      : Inicializa o seletor para xpath
+    button  : Tag html que representa o elemento
+    text()  : Estratégia de busca
+
+Para selecionar um botão usando o role
+
+    Forma tradicional:
+            await page.getByRole('button', {name: 'Aperte o play... se tiver coragem'})
+        Dessa forma vai pesquisar por um botão que contem esse texto tal qual está escrito, é uma forma mais 
+    
+    
+    Localizador com substring:
+            await page.getByRole('button', {name: /Aperte o play/})
+        Dessa forma vai pesquisar por um botão que contem esse texto,
+
+Para selecionar o campo de email usando LOCATOR com seletor css
+
+    await page.locator('#name').fill('vitor@teste.com')
+        usando a estratégia do CSS selector o # vai servir para buscar o campo que tem o ID Name
+
+    await page.locator('ELEMENTO[PROP=VALUE]')
+    await page.locator('input[name=name]')
+    await page.locator('input[placeholder="Seu nome completo"]')
+    
